@@ -11,16 +11,13 @@ require 'open-uri'
 # Return a string representing the integer following the first dollar sign found in the argument
 def parse_price(details)
   price = details.match(/\$(\d+)/)
-  return price[1] if price
-  return "price not found"
+  return price ? price[1] : "price not found"
 end
 
 # Return a string representing the integer preceding the characters "br" found in the argument
 def parse_bedrooms(details)
-  # The regular expression below will match a digit followed by "br"
   bedrooms = details.match(/(\d)br/)
-  return bedrooms[1] if bedrooms
-  return "bedrooms not found"
+  return bedrooms ? bedrooms[1] : "bedrooms not found"
 end
 
 # Apartments on Craigslist are contained in a list of "items" (their term).
