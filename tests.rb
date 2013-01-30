@@ -1,7 +1,7 @@
 # Craigslist Scraper Specs
 # To run the tests, use "ruby tests.rb" from the command-line.
 # A successful pass will result in:
-# 11 tests, 10 assertions, 0 failures, 0 errors, 2 skips
+# 8 tests, 7 assertions, 0 failures, 0 errors, 2 skips
 
 # Require the standard MiniTest/Spec files
 require 'minitest/spec'
