@@ -26,11 +26,11 @@ def create_digest(html)
   apartments = []
   items = html.css('p.row')
   items.each do |item|
-    details = item.css('.itemph').text
+    details = item.css('.pl').text
     new_digest = {
       :description => item.css('a').text,
-      :price => parse_price(details),
-      :bedrooms => parse_bedrooms(details)
+      :price => parse_price(item.css('.price').text),
+      :bedrooms => parse_bedrooms(item.css('.pnr').text)
     }
     apartments << new_digest
   end
